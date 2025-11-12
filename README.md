@@ -1,4 +1,4 @@
-# Flexa Scripting Language
+# FlexaScrip Documentation
 
 Welcome to the official documentation of the **Flexa Scripting Language**! Flexa is a toy scripting language developed for fun.
 
