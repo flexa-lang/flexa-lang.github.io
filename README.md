@@ -12,7 +12,7 @@ Welcome to the official documentation of the **Flexa Scripting Language**! Flexa
 
 ## Getting Started
 
-1. **Install Flexa**: Download and install the Flexa interpretor from the [official repository](https://github.com/flexascript/interpreter).
+1. **Install Flexa**: Download and install the Flexa interpretor from the [official repository](https://github.com/flexascript/flexascript).
 2. **Write Your First Program**: Create a `.flx` file and start coding! Here's a simple example:
 
     ```flexa
