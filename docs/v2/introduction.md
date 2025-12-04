@@ -6,7 +6,7 @@ Welcome to the **Flexa Programming Language**! Flexa is a toy scripting language
 
 ## What is Flexa?
 
-Flexa is a statically-typed, general-purpose scripting language that emphasizes simplicity, readability, and flexibility. It combines the best features of modern programming languages with a clean and intuitive syntax, making it easy to learn and use.
+Flexa is a statically-typed, general-purpose language that emphasizes simplicity, readability, and flexibility. It combines the best features of modern programming languages with a clean and intuitive syntax, making it easy to learn and use.
 
 ### Key Features
 - **Simple and Clean Syntax**: Flexa's syntax is designed to be easy to read and write, reducing the cognitive load on developers.
