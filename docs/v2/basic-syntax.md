@@ -1,19 +1,6 @@
 # Basic Syntax
 
-In this section, we'll explore the basic syntax of the Flexa programming language. You'll learn about namespaces, variables, comments, and the fundamental structure of a Flexa program.
-
----
-
-## Namespaces
-
-Namespaces are used to organize code and avoid naming conflicts, but it's not mandatory. A namespace is declared at the beginning of a Flexa file using the `namespace` keyword, followed by an identifier and a semicolon.
-
-```flexa
-namespace my_namespace;
-```
-
-All code in the file belongs to this namespace. If no namespace is specified, the default `__default__` namespace is used.
-
+In this section, we'll explore the basic syntax of the Flexa language. You'll learn about namespaces, variables, comments, and the fundamental structure of a Flexa program.
 
 ---
 
@@ -39,8 +26,20 @@ Flexa supports two types of comments:
 To use external libraries or modules, Flexa provides the `using` keyword. This allows you to include functionality from other files or libraries.
 
 ```flexa
-using flx.std.types; // Import the console library
-using my_library.utils; // Import a custom library
+using flx.std.types; // Import the standard types library
+using my_libraries.utils; // Import a custom library
+```
+
+You also can use wildcard semantic to import all modules (`.flx` files) in a folder:
+
+```flexa
+using my_libraries.*;
+```
+
+And finally, it is possible to import specifics declarations in a module using the following syntax:
+
+```flexa
+from custom_lib use Foo, Bar;
 ```
 
 ---
@@ -48,20 +47,17 @@ using my_library.utils; // Import a custom library
 ## Basic Program Structure
 
 A Flexa program typically consists of:
-1. A **namespace declaration**.
-2. **Library imports**.
-3. **Function and variable declarations**.
-4. **Executable code** (e.g., function calls).
+1. **Library imports**.
+2. **Function and variable declarations**.
+3. **Executable code** (e.g., function calls).
 
 Here's an example of a simple Flexa program:
 
 ```flexa
-namespace hello_world;
-
-using flx.std.strings;
+using flx.std.random;
 
 fun main() {
-  println("Hello, Flexa", flx::repeat("!", 3));
+  println("Hello, Flexa", "!".repeat("!", Random.randi_range(0, 3)));
 }
 
 fun main();
@@ -83,7 +79,7 @@ var y = 20;      // Type inference, y is declared as any and value is inferred a
 Constants are declared using the `const` keyword and must be initialized with a value.
 
 ```flexa
-const PI: float = 3.14; // Declare a constant
+const PI: float = 3.1415; // Declare a constant
 ```
 
 ---
@@ -110,7 +106,7 @@ println("Yout age is ", age, "!");
 Code blocks are enclosed in curly braces `{}` and are used to group multiple statements together. They are commonly used in functions, loops, and conditionals.
 
 ```flexa
-<statement> {
+{
   var a = 10;
   var b = 20;
   println(a + b);

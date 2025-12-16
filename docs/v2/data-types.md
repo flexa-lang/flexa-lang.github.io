@@ -13,27 +13,45 @@ Primitive types are the basic building blocks of Flexa programs. They include:
    - Example:
      ```flexa
      var is_active: bool = true;
+     var is_inactive: bool = false;
      ```
 
 ### 2. **Byte (`byte`)**
    - Represents 8 bit data, from 0 to 255 or characters (eg. `'A'`).
    - Example:
      ```flexa
-     var grade: char = 'A';
+     var grade: byte = 'A';
+     var b: byte = 255;
+     var bo: byte = 0o377;
+     var bx: byte = 0xFF;
+     var bb: byte = 0b11111111;
+     var bd: byte = 0d255;
+     var bytes: byte[10] = [0, 1, 2, 4, 8, 16, 32, 64, 128, 255];
      ```
 
 ### 3. **Integer (`int`)**
-   - Represents whole numbers (e.g., `42`, `-7`).
+   - Represents whole numbers (e.g., `42`, `-7`), with no max size.
    - Example:
      ```flexa
      var age: int = 25;
+     var i: int = 25;
+     var io: int = 0o31;
+     var ix: int = 0x19;
+     var ib: int = 0b11001;
+     var id: int = 0d25;
      ```
 
 ### 4. **Floating-Point (`float`)**
-   - Represents decimal numbers (e.g., `3.14`, `-0.001`).
+   - Represents decimal (64 bits precision) numbers (e.g., `3.14`, `-0.001`).
    - Example:
      ```flexa
-     var pi: float = 3.14;
+     var pi: float = 3.1415;
+     var em1 = 10e-1;
+     var em0 = 10e-0;
+     var e0 = 10e0;
+     var ep0 = 10e+0;
+     var e1 = 10e1;
+     var ep1 = 10e+1;
      ```
 
 ### 5. **String (`string`)**
@@ -50,7 +68,7 @@ Primitive types are the basic building blocks of Flexa programs. They include:
 Composite types are used to group multiple values together. They include:
 
 ### 1. **Arrays**
-   - Represents size fixed collection of elements.
+   - Represents a fast size fixed collection of elements.
    - Example:
      ```flexa
      var size: int = int(read("Array size: "));
@@ -71,8 +89,8 @@ Composite types are used to group multiple values together. They include:
    - Represents a collection of elements of the same type.
    - Example:
      ```flexa
-     var numbers: dict = {foo: "bar"};
-     var matrix: list = {% raw %}{"fux":{foo: "bar"}, qux:{foo: "bar"}}{% endraw %};
+     var foo: dict = {foo: "bar"};
+     var bar: list = {% raw %}{"fux":{foo: "bar"}, qux:{foo: "bar"}}{% endraw %};
      ```
 
 ### 2. **Structs**
@@ -118,7 +136,7 @@ Flexa also supports special types for specific use cases:
    - Represents a function or lambda.
    - Example:
      ```flexa
-     var greet: function = fun (name: string) {
+     var greet: function = lambda (name: string) {
        println("Hello, " + name + "!");
      };
      ```
