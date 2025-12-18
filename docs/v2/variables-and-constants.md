@@ -32,7 +32,7 @@ var price: float = 19.99;   // Explicitly typed variable
 Variables in Flexa have block scope, meaning they are only accessible within the block where they are declared.
 
 ```flexa
-<statement> {
+{
   var x = 10; // x is only accessible within this block
   println(x); // Works fine
 }
@@ -68,7 +68,7 @@ const GREETING = "Hello!";  // Type inferred as string
 Like variables, constants have block scope and are only accessible within the block where they are declared.
 
 ```flexa
-<statement> {
+{
   const TAX_RATE = 0.07; // TAX_RATE is only accessible within this block
   println(TAX_RATE);     // Works fine
 }

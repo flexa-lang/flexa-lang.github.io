@@ -109,11 +109,6 @@ Useful for inspecting or identifying values at runtime:
 | `typeid(x)`    | Returns a unique integer ID for the type of `x` |
 | `refid(x)`     | Returns the reference ID of an object or array (useful to check if two references point to the same entity) |
 | `x instanceof ClassType` | Returns `true` if `x` is a instance of a class type |
-<!-- 
-| `is_struct(x)` | Returns `true` if `x` is a struct instance      |
-| `is_array(x)`  | Returns `true` if `x` is an array               |
-| `is_any(x)`    | Returns `true` if `x` is of type `any`          | 
--->
 
 ---
 
