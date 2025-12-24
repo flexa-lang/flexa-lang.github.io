@@ -13,6 +13,7 @@ Primitive types are the basic building blocks of Flexa programs. They include:
    - Example:
      ```flexa
      var is_active: bool = true;
+     var is_inactive: bool = false;
      ```
 
 ### 2. **Integer (`int`)**
@@ -20,13 +21,24 @@ Primitive types are the basic building blocks of Flexa programs. They include:
    - Example:
      ```flexa
      var age: int = 25;
+     var i: int = 25;
+     var io: int = 0o31;
+     var ix: int = 0x19;
+     var ib: int = 0b11001;
+     var id: int = 0d25;
      ```
 
 ### 3. **Floating-Point (`float`)**
-   - Represents decimal numbers (e.g., `3.14`, `-0.001`).
+   - Represents decimal (64 bits precision) numbers (e.g., `3.14`, `-0.001`).
    - Example:
      ```flexa
-     var pi: float = 3.14;
+     var pi: float = 3.1415;
+     var em1 = 10e-1;
+     var em0 = 10e-0;
+     var e0 = 10e0;
+     var ep0 = 10e+0;
+     var e1 = 10e1;
+     var ep1 = 10e+1;
      ```
 
 ### 4. **Character (`char`)**
@@ -67,6 +79,30 @@ Composite types are used to group multiple values together. They include:
      };
 
      var person: Person = Person{name="Alice", age=30};
+     var person2: struct Person; // classes has precedence when identifing a type, so it's possible to disambiguity by using struct before struct type in case of has both struct and class with same name
+     ```
+
+### 2. **Classes**
+   - Represents a user-defined object that has it's variables and methods.
+   - Example:
+     ```flexa
+     class Car {
+       var name: string;
+       var model: string;
+	   
+       init(name, model) {
+        self.name = name;
+        self.model = model;
+       }
+
+       fun drive() {
+        return true;
+       }
+
+     };
+
+     var car: Car = Car("Gurgel", "Itaipu");
+     var car2: class Car;
      ```
 
 ---
@@ -79,7 +115,7 @@ Flexa also supports special types for specific use cases:
    - Represents a function or lambda.
    - Example:
      ```flexa
-     var greet: function = fun (name: string) {
+     var greet: function = lambda (name: string) {
        println("Hello, " + name + "!");
      };
      ```
